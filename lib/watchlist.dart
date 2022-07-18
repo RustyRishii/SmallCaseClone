@@ -11,8 +11,21 @@ class watchlist extends StatefulWidget {
 }
 
 class _watchlistState extends State<watchlist> {
+
+  int CurrentIndex=0;
+
+  void Ontapped(int index)
+  {
+    setState(() {
+      CurrentIndex= index;});
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Watchlist"),
+      ),
+    );
   }
 }
