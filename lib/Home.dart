@@ -83,12 +83,12 @@ class _HomeState extends State<Home> {
             Container(
               decoration: const BoxDecoration(
                 //border: Border.all(width: 5, color: Colors.red),
-                borderRadius: BorderRadius.all(Radius.circular(5)),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
                 color: Color.fromRGBO(42, 43, 45, 1),
               ),
               margin: const EdgeInsets.all(15),
               width: 500,
-              height: 130,
+              height: 125,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -103,17 +103,19 @@ class _HomeState extends State<Home> {
                   ),
                   const SizedBox(height: 20),
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: const <Widget>[
                         SizedBox(width: 25),
                         Text("NIFTY", style: TextStyle(fontSize: 15, color: Colors.grey)),
+                        SizedBox(width: 200),
                         Text("Current Value", style: TextStyle(fontSize: 15, color: Colors.grey)),
-                        SizedBox(width: 25),
                       ]),
-                  Row(children: const <Widget>[
+                  Row(
+                      children: const <Widget>[
                     SizedBox(width: 25),
-                    Text("16,520.84",
-                        style: TextStyle(fontSize: 20, color: Colors.white))
+                    Text("16,520.84", style: TextStyle(fontSize: 20, color: Colors.white,fontWeight:FontWeight.w600)),
+                    SizedBox(width: 170),
+                    Text("₹25,227", style: TextStyle(fontSize: 20, color: Colors.white,fontWeight:FontWeight.w600))
                   ]),
                 ],
               ),
