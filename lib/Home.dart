@@ -88,7 +88,7 @@ class _HomeState extends State<Home> {
               ),
               margin: const EdgeInsets.all(15),
               width: 500,
-              height: 150,
+              height: 130,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -96,13 +96,24 @@ class _HomeState extends State<Home> {
                   Row(
                     children: const <Widget>[
                       SizedBox(width: 25),
-                      Text("Investment Overview", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
+                      Text("Investment Overview",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20))
                     ],
                   ),
                   const SizedBox(height: 20),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: const <Widget>[
+                        SizedBox(width: 25),
+                        Text("NIFTY", style: TextStyle(fontSize: 15, color: Colors.grey)),
+                        Text("Current Value", style: TextStyle(fontSize: 15, color: Colors.grey)),
+                        SizedBox(width: 25),
+                      ]),
                   Row(children: const <Widget>[
                     SizedBox(width: 25),
-                    Text("NIFTY", style: TextStyle(fontSize: 15, color: Colors.grey))
+                    Text("16,520.84",
+                        style: TextStyle(fontSize: 20, color: Colors.white))
                   ]),
                 ],
               ),
