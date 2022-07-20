@@ -91,14 +91,19 @@ class _HomeState extends State<Home> {
               height: 150,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const <Widget> [
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(20, 15, 0, 0),
-                    child: Text(
-                      "Investment Overview",
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
-                  )
+                children: <Widget>[
+                  const SizedBox(height: 20),
+                  Row(
+                    children: const <Widget>[
+                      SizedBox(width: 25),
+                      Text("Investment Overview", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20))
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Row(children: const <Widget>[
+                    SizedBox(width: 25),
+                    Text("NIFTY", style: TextStyle(fontSize: 15, color: Colors.grey))
+                  ]),
                 ],
               ),
             )
