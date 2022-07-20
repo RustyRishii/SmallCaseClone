@@ -59,20 +59,27 @@ class _BottomBarState extends State<BottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screens[CurrentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: CurrentIndex,
-        onTap: OnTappedItem,
-        selectedItemColor: Colors.green,
-        unselectedItemColor: Colors.red,
-        items:  [
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.amazon), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.amazon),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.amazon),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.amazon),label: "Home")
-        ],
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(color: Colors.black, border: Border(top:BorderSide(color: Color.fromRGBO(33, 34, 36, 9), width: 1.5))),
+        child: BottomNavigationBar(
+          backgroundColor: Color.fromRGBO( 33, 34, 36, 5),
+          type: BottomNavigationBarType.fixed,
+          currentIndex: CurrentIndex,
+          iconSize: 24,
+          unselectedLabelStyle: TextStyle(fontSize: 12),
+          selectedLabelStyle: TextStyle(fontSize: 12),
+          onTap: OnTappedItem,
+          selectedItemColor: Colors.blue,
+          unselectedItemColor: Colors.grey,
+          items:  [
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.house,),label:"Home"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.compass),label: "Discover"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.box),label: "Create"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.bookmark),label: "Watchlist"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.businessTime),label: "Investments"),
+          ],
+        ),
       ),
     );
   }
 }
-
