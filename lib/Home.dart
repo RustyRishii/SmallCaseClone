@@ -11,6 +11,7 @@ class Home extends StatefulWidget {
 }
 
 String quote = "";
+final Widget IconTest = Icons.bookmark_border as Widget;
 
 class _HomeState extends State<Home> {
   @override
@@ -309,7 +310,7 @@ class _HomeState extends State<Home> {
                     width: 20,
                   ),
                   Text(
-                    "Poplar investment idea",
+                    "Popular investment idea",
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -359,7 +360,9 @@ class _HomeState extends State<Home> {
                               const SizedBox(width: 130),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(5), bottomLeft:Radius.circular(5)),
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(5),
+                                        bottomLeft: Radius.circular(5)),
                                     color: Color.fromRGBO(153, 128, 64, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
@@ -397,7 +400,7 @@ class _HomeState extends State<Home> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
-                               //const SizedBox(width: 1),
+                              //const SizedBox(width: 1),
                               Column(
                                 children: const <Widget>[
                                   Text(
@@ -424,12 +427,13 @@ class _HomeState extends State<Home> {
                                   )
                                 ],
                               ),
-                              const Icon(Icons.bookmark_border,color: Colors.grey),
+                              const Icon(Icons.bookmark_border,
+                                  color: Colors.grey),
                             ],
                           ),
                         ],
                       ),
-                    ),//Rural demand
+                    ), //Rural demand
                     Container(
                       decoration: const BoxDecoration(
                         //border: Border.all(width: 5, color: Colors.red),
@@ -457,7 +461,9 @@ class _HomeState extends State<Home> {
                               const SizedBox(width: 130),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(5), bottomLeft:Radius.circular(5)),
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(5),
+                                        bottomLeft: Radius.circular(5)),
                                     color: Color.fromRGBO(124, 69, 64, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
@@ -522,12 +528,18 @@ class _HomeState extends State<Home> {
                                   )
                                 ],
                               ),
-                              const Icon(Icons.bookmark_border,color: Colors.grey),
+                              GestureDetector(
+                                  onTap: () {
+                                    const Icon(Icons.bookmark,
+                                        color: Colors.grey);
+                                  },
+                                  child: const Icon(Icons.bookmark_border,
+                                      color: Colors.grey)),
                             ],
                           ),
                         ],
                       ),
-                    ),//Digital inclusion
+                    ), //Digital inclusion
                     Container(
                       decoration: const BoxDecoration(
                         //border: Border.all(width: 5, color: Colors.red),
@@ -555,7 +567,9 @@ class _HomeState extends State<Home> {
                               const SizedBox(width: 130),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(topLeft: Radius.circular(5), bottomLeft:Radius.circular(5)),
+                                    borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(5),
+                                        bottomLeft: Radius.circular(5)),
                                     color: Color.fromRGBO(124, 69, 64, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
@@ -620,12 +634,57 @@ class _HomeState extends State<Home> {
                                   )
                                 ],
                               ),
-                              const Icon(Icons.bookmark_border,color: Colors.grey),
+                              GestureDetector(
+                                  onTap: () {
+                                    setState(() {
+                                      const Icon(Icons.bookmark, color: Colors.grey);
+                                    });
+                                  },
+                                  child: const Icon(Icons.bookmark_border,
+                                      color: Colors.grey)),
                             ],
                           ),
                         ],
                       ),
                     ),
+                  ],
+                ),
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  //border: Border.all(width: 5, color: Colors.red),
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                  color: Color.fromRGBO(42, 43, 45, 1),
+                ),
+                margin: const EdgeInsets.all(15),
+                width: 500,
+                height: 110,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const <Widget>[
+                        SizedBox(width: 25),
+                        Expanded(
+                          child: Padding(
+                            padding: EdgeInsets.only(right: 90),
+                            child: Text(
+                              "Your core smallcase is all set! Explore large-cap smallcases for betterlong term returns",
+                              style: TextStyle(color: Colors.white, fontSize: 15,fontWeight: FontWeight.w500),
+                              maxLines: 3,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ), //sized box and "investment overview"
+                    const SizedBox(width: 20),
+                    Row(
+                      children: const [
+                        SizedBox(width: 25, height: 25),
+                        Text("See next steps",style: TextStyle(color: Colors.blue,fontSize: 15),),
+                      ],
+                    )
                   ],
                 ),
               ),

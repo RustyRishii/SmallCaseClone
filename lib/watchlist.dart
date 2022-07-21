@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newtry/Home.dart';
 
 class WatchList extends StatefulWidget {
   const WatchList({Key? key}) : super(key: key);
@@ -10,6 +11,16 @@ class WatchList extends StatefulWidget {
 class _WatchListState extends State<WatchList> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Home"),
+          centerTitle: false,
+        ),
+      body: Column(
+        children: const <Widget> [
+          
+        ],
+      ),
+    );
   }
 }
