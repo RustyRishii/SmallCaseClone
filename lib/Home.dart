@@ -420,7 +420,7 @@ class _HomeState extends State<Home> {
                                   Text(
                                     "₹ 56,601",
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 18),
+                                        color: Colors.white, fontSize: 18),
                                   )
                                 ],
                               ),
@@ -518,7 +518,7 @@ class _HomeState extends State<Home> {
                                   Text(
                                     "₹ 18,390",
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 18),
+                                        color: Colors.white, fontSize: 18),
                                   )
                                 ],
                               ),
@@ -548,7 +548,7 @@ class _HomeState extends State<Home> {
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(3.1),
                                 child: Image.network(
-                                    "https://assets.smallcase.com/images/smallcases/200/SCNM_0014.png",
+                                    "https://assets.smallcase.com/images/smallcases/200/SCNM_0024.png",
                                     height: 50,
                                     width: 50),
                               ),
@@ -570,7 +570,7 @@ class _HomeState extends State<Home> {
                               SizedBox(width: 20, height: 40),
                               Expanded(
                                 child: Text(
-                                  "Digital Inclusion",
+                                  "Affordable Housing",
                                   style: TextStyle(fontSize: 20),
                                 ),
                               ),
@@ -581,7 +581,7 @@ class _HomeState extends State<Home> {
                               SizedBox(width: 20, height: 1),
                               Expanded(
                                 child: Text(
-                                  "Comanies spearheading and benefitting from the digital revolution in india",
+                                  "Companies participating in and benefitting from affordable housing projects",
                                   maxLines: 2,
                                   style: TextStyle(
                                       fontSize: 15, color: Colors.grey),
@@ -597,11 +597,11 @@ class _HomeState extends State<Home> {
                               Column(
                                 children: const <Widget>[
                                   Text(
-                                    "6Y CAGR",
+                                    "5Y CAGR",
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                   Text(
-                                    "14.95%",
+                                    "10.68%",
                                     style: TextStyle(
                                         color: Colors.green, fontSize: 18),
                                   )
@@ -614,9 +614,9 @@ class _HomeState extends State<Home> {
                                     style: TextStyle(color: Colors.grey),
                                   ),
                                   Text(
-                                    "₹ 18,390",
+                                    "₹ 32,710",
                                     style: TextStyle(
-                                        color: Colors.green, fontSize: 18),
+                                        color: Colors.white, fontSize: 18),
                                   )
                                 ],
                               ),
