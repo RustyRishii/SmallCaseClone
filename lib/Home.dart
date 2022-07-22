@@ -76,7 +76,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ), //image and quote
-              const SizedBox(height: 10),
+              //const SizedBox(height: 5),
               Container(
                 decoration: const BoxDecoration(
                   //border: Border.all(width: 5, color: Colors.red),
@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                         color: Color.fromRGBO(62, 132, 165, 1),
                       ),
-                      margin: const EdgeInsets.all(15),
+                      margin: const EdgeInsets.fromLTRB(15, 5, 15, 5),
                       //color: Colors.blue,
                       width: 310,
                       height: 200,
@@ -267,7 +267,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              const SizedBox(height: 5),
+              //const SizedBox(height: 5),
               Row(
                 children: const <Widget>[
                   SizedBox(width: 15),
