@@ -10,6 +10,11 @@ class Investments extends StatefulWidget {
 class _InvestmentsState extends State<Investments> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Investment"),
+          centerTitle: false,
+        )
+    );
   }
 }

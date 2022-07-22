@@ -10,6 +10,11 @@ class Discover extends StatefulWidget {
 class _DiscoverState extends State<Discover> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Discover"),
+        centerTitle: false,
+      ),
+    );
   }
 }

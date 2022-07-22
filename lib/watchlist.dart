@@ -13,14 +13,9 @@ class _WatchListState extends State<WatchList> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Home"),
+          title: const Text("Watchlist"),
           centerTitle: false,
-        ),
-      body: Column(
-        children: const <Widget> [
-          
-        ],
-      ),
+        )
     );
   }
 }

@@ -10,6 +10,11 @@ class Create extends StatefulWidget {
 class _CreateState extends State<Create> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Create"),
+          centerTitle: false,
+        )
+    );
   }
 }

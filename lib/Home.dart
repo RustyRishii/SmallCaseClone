@@ -339,7 +339,7 @@ class _HomeState extends State<Home> {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                         color: Color.fromRGBO(39, 40, 42, 1),
                       ),
-                      margin: const EdgeInsets.all(15),
+                      margin: const EdgeInsets.all(10),
                       //color: Colors.blue,
                       width: 310,
                       height: 230,
