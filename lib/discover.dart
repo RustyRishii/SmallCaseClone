@@ -96,12 +96,18 @@ class _DiscoverState extends State<Discover> {
                   ),
                 ],
               ),
+            ),
+            Row(
+              children: const <Widget> [
+                SizedBox(height: 20),
+                Text(
+                  "Filter you can try",
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                ),
+              ],
             )
           ],
-        ));
+        ),
+    );
   }
 }
-
-/*
-
- */
