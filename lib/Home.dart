@@ -14,42 +14,46 @@ String quote = "";
 final Widget IconTest = Icons.bookmark_border as Widget;
 
 class _HomeState extends State<Home> {
+
+  @override
+  initState()
+  {
+    super.initState();
+        () async {
+      var url = Uri.parse(
+          'http://api.quotable.io/random');
+      var response = await http.get(url);
+      print('Response status: ${response.statusCode}');
+      print('Response body: ${response.body}');
+
+      var data = jsonDecode(response.body);
+      quote = data["content"];
+
+      await Future.delayed(Duration(microseconds: 1500));
+
+      setState(() {});
+    };
+        print("rusty");
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           title: const Text("Home"),
           centerTitle: false,
-          actions: <Widget>[
-            ElevatedButton(
-              onPressed: () async {
-                var url = Uri.parse(
-                    'https://goquotes-api.herokuapp.com/api/v1/random?count=1');
-                var response = await http.get(url);
-                print('Response status: ${response.statusCode}');
-                print('Response body: ${response.body}');
-
-                var data = jsonDecode(response.body);
-                quote = data["quotes"][0]["text"];
-
-                await Future.delayed(const Duration(microseconds: 1500));
-
-                setState(() {});
-              },
-              child: const Text("Refresh"),
-            )
-          ],
         ),
         body: RefreshIndicator(
           onRefresh: () async {
             var url = Uri.parse(
-                'https://programming-quotes-api.herokuapp.com/Quotes?count=010');
+                'http://api.quotable.io/random');
             var response = await http.get(url);
             print('Response status: ${response.statusCode}');
             print('Response body: ${response.body}');
 
             var data = jsonDecode(response.body);
-            quote = data[1]["en"];
+            quote = data["content"];
 
             await Future.delayed(Duration(microseconds: 1500));
 
@@ -718,3 +722,6 @@ class _HomeState extends State<Home> {
         backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
   }
 }
+
+
+//AsyncMethod
