@@ -97,12 +97,13 @@ class _DiscoverState extends State<Discover> {
                 ],
               ),
             ),
+            SizedBox(height: 30),
             Row(
               children: const <Widget> [
-                SizedBox(height: 20),
+                SizedBox(height: 20,width: 15),
                 Text(
-                  "Filter you can try",
-                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                  "Filters you can try",
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ],
             )
