@@ -13,7 +13,7 @@ class _CreateState extends State<Create> {
         appBar: AppBar(
           title: const Text("Create"),
           centerTitle: false,
-        )
-    );
+        ),
+        backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
   }
 }

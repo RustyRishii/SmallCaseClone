@@ -15,7 +15,7 @@ class _WatchListState extends State<WatchList> {
         appBar: AppBar(
           title: const Text("Watchlist"),
           centerTitle: false,
-        )
-    );
+        ),
+        backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
   }
 }

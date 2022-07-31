@@ -14,7 +14,7 @@ class _InvestmentsState extends State<Investments> {
         appBar: AppBar(
           title: const Text("Investment"),
           centerTitle: false,
-        )
-    );
+        ),
+        backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
   }
 }
