@@ -404,6 +404,7 @@ class _DiscoverState extends State<Discover> {
                             ),
                           ),
                         ),
+
                       ],
                     ),
                   ),
