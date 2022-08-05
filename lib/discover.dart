@@ -122,7 +122,6 @@ class _DiscoverState extends State<Discover> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-
                       children: <Widget>[
                         Container(
                           margin: const EdgeInsets.only(right: 10, left: 10),
