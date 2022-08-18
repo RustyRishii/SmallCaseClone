@@ -427,7 +427,7 @@ class _DiscoverState extends State<Discover> {
                               fontSize: 17),
                         ),
                       ),
-                    ),
+                    ), //"See all smallcases"
                     const SizedBox(height: 10),
                     Row(
                       children: const [
@@ -437,7 +437,7 @@ class _DiscoverState extends State<Discover> {
                           style: TextStyle(color: Colors.white, fontSize: 17),
                         ),
                       ],
-                    ),
+                    ), //"Smallcases"
                     Row(
                       children: const [
                         SizedBox(width: 15),
@@ -449,26 +449,25 @@ class _DiscoverState extends State<Discover> {
                               fontWeight: FontWeight.bold),
                         ),
                       ],
-                    ),
-                    SizedBox(height: 20),
+                    ), //"Specials"
+                    const SizedBox(height: 20),
                     Row(
-                      children: [
+                      children: const [
                         SizedBox(width: 10),
                         Text(
                           "Featured smallcases",
                           style: TextStyle(color: Colors.grey, fontSize: 15),
                         ),
                       ],
-                    ),
-                    //SizedBox(height: 20),
+                    ), //"Featured smallcases"
+                    const SizedBox(height: 5),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: <Widget>[
                           Container(
-                            margin:
-                                EdgeInsets.only(left: 10, right: 10),
-                            decoration: BoxDecoration(
+                            margin: const EdgeInsets.only(left: 10, right: 10),
+                            decoration: const BoxDecoration(
                                 color: Color.fromRGBO(39, 40, 42, 1),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10))),
@@ -476,52 +475,551 @@ class _DiscoverState extends State<Discover> {
                             width: 320,
                             child: Column(
                               children: <Widget>[
-                                SizedBox(
-                                  height: 20,
+                                const SizedBox(
+                                  height: 15,
                                 ),
                                 Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(3.1),
                                       child: Image.network(
-                                          "https://assets.smallcase.com/images/smallcases/200/SCET_0005.png",
-                                          height: 50,
-                                          width: 50),
+                                        "https://assets.smallcase.com/images/smallcases/200/SCET_0005.png",
+                                        height: 50,
+                                        width: 50,
+                                      ),
                                     ),
-                                    Text("Nice",style: TextStyle(color: Color.fromRGBO(39, 40, 42, 1)),),
+                                    const Text(
+                                      "Nice",
+                                      style: TextStyle(
+                                          fontSize: 33,
+                                          color: Color.fromRGBO(39, 40, 42, 1)),
+                                    ),
                                     Container(
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           color: Color.fromRGBO(44, 49, 81, 5),
                                           borderRadius: BorderRadius.all(
                                               Radius.circular(5))),
-                                      //margin: EdgeInsets.all(10),
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(5),
+                                      margin: const EdgeInsets.all(10),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(5),
                                         child: Text(
                                           "Popular",
-                                          style: TextStyle(fontSize: 20),
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
                                     )
                                   ],
+                                ), //Image
+                                const SizedBox(height: 10),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Equity & Gold",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 20),
+                                    ),
+                                  ],
+                                ), //Equity and gold
+                                const SizedBox(height: 5),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "by Windmill capital",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 15),
+                                    ),
+                                  ],
                                 ),
+                                const SizedBox(height: 10),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Viewed over 40k in the last month",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 15),
+                                    ),
+                                  ],
+                                ) //Windmill capital
                               ],
                             ),
-                          ),
+                          ), // Equity and gold
                           Container(
-                            margin:
-                                EdgeInsets.only(left: 10, top: 5, right: 10),
-                            decoration: BoxDecoration(
+                            margin: const EdgeInsets.only(left: 10, right: 10),
+                            decoration: const BoxDecoration(
                                 color: Color.fromRGBO(39, 40, 42, 1),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(10))),
                             height: 170,
                             width: 320,
+                            child: Column(
+                              children: <Widget>[
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(3.1),
+                                      child: Image.network(
+                                          "https://assets.smallcase.com/images/smallcases/200/SCET_0004.png",
+                                          height: 50,
+                                          width: 50),
+                                    ),
+                                    const Text(
+                                      "Nice",
+                                      style: TextStyle(
+                                          fontSize: 33,
+                                          color: Color.fromRGBO(39, 40, 42, 1)),
+                                    ),
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Color.fromRGBO(44, 49, 81, 5),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(5))),
+                                      margin: const EdgeInsets.all(10),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(5),
+                                        child: Text(
+                                          "Popular",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ), //Image
+                                const SizedBox(height: 10),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "Top 100 stocks",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white,
+                                          fontSize: 20),
+                                    ),
+                                  ],
+                                ), //Equity and gold
+                                const SizedBox(height: 5),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "by Windmill capital",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 15),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 10),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Text(
+                                      "Over 3k investors started SIP in last month",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 15),
+                                    ),
+                                  ],
+                                ) //Windmill capital
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    )
+                    ),
+                    const SizedBox(height: 20),
+                    Row(
+                      children: const [
+                        SizedBox(width: 10),
+                        Text(
+                          "Featured smallcases",
+                          style: TextStyle(color: Colors.grey, fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: <Widget>[
+                          Container(
+                            margin: const EdgeInsets.only(left: 10, right: 10),
+                            decoration: const BoxDecoration(
+                                color: Color.fromRGBO(39, 40, 42, 1),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
+                            height: 200,
+                            width: 320,
+                            child: Column(
+                              children: <Widget>[
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(3.1),
+                                      child: Image.network(
+                                          "https://pbs.twimg.com/profile_images/1455178352961064961/KiiYF5cG_400x400.jpg",
+                                          height: 50,
+                                          width: 50),
+                                    ),
+                                    const Text(
+                                      "Nice",
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(39, 40, 42, 1),
+                                          fontSize: 35),
+                                    ),
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Color.fromRGBO(44, 49, 81, 5),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(5))),
+                                      margin: const EdgeInsets.all(10),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(5),
+                                        child: Text(
+                                          "Popular",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 15),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "Windmill capital",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "54 smallcases",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 15),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                Container(
+                                  margin: EdgeInsets.all(5),
+                                  child: Row(
+                                    children: const [
+                                      SizedBox(width: 20),
+                                      Expanded(
+                                          child: Text(
+                                        "Idea based on portfolios, backed by fundamental analysis, & powered by data.",
+                                        style: TextStyle(color: Colors.white),
+                                        maxLines: 2,
+                                      )),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                              margin: const EdgeInsets.only(left: 10, right: 10),
+                            decoration: const BoxDecoration(
+                                color: Color.fromRGBO(39, 40, 42, 1),
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(5))),
+                            height: 200,
+                            width: 320,
+                            child: Column(
+                              children: <Widget>[
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(3.1),
+                                      child: Image.network(
+                                          "https://st3.depositphotos.com/1561359/12975/i/600/depositphotos_129758586-stock-photo-3d-green-letter-g.jpg",
+                                          height: 50,
+                                          width: 50),
+                                    ),
+                                    const Text(
+                                      "Nice",
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(39, 40, 42, 1),
+                                          fontSize: 35),
+                                    ),
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Color.fromRGBO(44, 49, 81, 5),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(5))),
+                                      margin: const EdgeInsets.all(10),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(5),
+                                        child: Text(
+                                          "Trending",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 15),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "Green Portfolio",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "6 smallcases",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 15),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                Container(
+                                  margin: EdgeInsets.all(5),
+                                  child: Row(
+                                    children: const [
+                                      SizedBox(width: 20),
+                                      Expanded(
+                                          child: Text(
+                                            "Bottom-up stock picking to identify competitive businesses for long term wealth creation",
+                                            style: TextStyle(color: Colors.white,fontSize: 14),
+                                            maxLines: 3,
+                                          ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(left: 10, right: 10),
+                            decoration: const BoxDecoration(
+                                color: Color.fromRGBO(39, 40, 42, 1),
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(5))),
+                            height: 200,
+                            width: 320,
+                            child: Column(
+                              children: <Widget>[
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(3.1),
+                                      child: Image.network(
+                                          "https://i.pinimg.com/originals/c2/3e/04/c23e04644d57528303215b12bd1d08df.jpg",
+                                          height: 50,
+                                          width: 50),
+                                    ),
+                                    const Text(
+                                      "Nice",
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(39, 40, 42, 1),
+                                          fontSize: 35),
+                                    ),
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Color.fromRGBO(44, 49, 81, 5),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(5))),
+                                      margin: const EdgeInsets.all(10),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(5),
+                                        child: Text(
+                                          "Popular",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 15),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "Wright Research",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "11 smallcases",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 15),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                Container(
+                                  margin: EdgeInsets.all(5),
+                                  child: Row(
+                                    children: const [
+                                      SizedBox(width: 20),
+                                      Expanded(
+                                        child: Text(
+                                          "AI-powered robo advisor creating multi-factor tactical portfolios.",
+                                          style: TextStyle(color: Colors.white,fontSize: 14),
+                                          maxLines: 3,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Container(
+                            margin: const EdgeInsets.only(left: 10, right: 10),
+                            decoration: const BoxDecoration(
+                                color: Color.fromRGBO(39, 40, 42, 1),
+                                borderRadius:
+                                BorderRadius.all(Radius.circular(5))),
+                            height: 200,
+                            width: 320,
+                            child: Column(
+                              children: <Widget>[
+                                const SizedBox(height: 15),
+                                Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceAround,
+                                  children: <Widget>[
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(3.1),
+                                      child: Image.network(
+                                          "https://i.pinimg.com/originals/c2/3e/04/c23e04644d57528303215b12bd1d08df.jpg",
+                                          height: 50,
+                                          width: 50),
+                                    ),
+                                    const Text(
+                                      "Nice",
+                                      style: TextStyle(
+                                          color: Color.fromRGBO(39, 40, 42, 1),
+                                          fontSize: 35),
+                                    ),
+                                    Container(
+                                      decoration: const BoxDecoration(
+                                          color: Color.fromRGBO(44, 49, 81, 5),
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(5))),
+                                      margin: const EdgeInsets.all(10),
+                                      child: const Padding(
+                                        padding: EdgeInsets.all(5),
+                                        child: Text(
+                                          "Trending",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 15),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "Niveshaay",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 20),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const <Widget>[
+                                    SizedBox(width: 20),
+                                    Text(
+                                      "4 smallcases",
+                                      style: TextStyle(
+                                          color: Colors.grey, fontSize: 15),
+                                    )
+                                  ],
+                                ),
+                                const SizedBox(height: 20),
+                                Container(
+                                  margin: EdgeInsets.all(5),
+                                  child: Row(
+                                    children: const [
+                                      SizedBox(width: 20),
+                                      Expanded(
+                                        child: Text(
+                                          "Portfolios focused on earning potential upside identified via micro-levels business understanding",
+                                          style: TextStyle(color: Colors.white,fontSize: 14),
+                                          maxLines: 3,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),
@@ -531,4 +1029,3 @@ class _DiscoverState extends State<Discover> {
         backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
   }
 }
-
