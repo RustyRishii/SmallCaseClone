@@ -363,7 +363,7 @@ class _HomeState extends State<Home> {
                             children: <Widget>[
                               const SizedBox(height: 15),
                               Row(
-                                //mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   const SizedBox(width: 20),
                                   ClipRRect(
