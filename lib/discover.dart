@@ -1348,7 +1348,7 @@ class _DiscoverState extends State<Discover> {
                           ),
                         ],
                       ),
-                    ),
+                    ), //"Brains behind smallcases"
                     const SizedBox(height: 20),
                     Row(
                       children: const <Widget>[
@@ -1361,7 +1361,7 @@ class _DiscoverState extends State<Discover> {
                               fontWeight: FontWeight.bold),
                         )
                       ],
-                    ),
+                    ), //"ALl smallcases"
                     const SizedBox(height: 5),
                     Row(
                       children: const <Widget>[
@@ -1371,7 +1371,7 @@ class _DiscoverState extends State<Discover> {
                           style: TextStyle(color: Colors.grey),
                         )
                       ],
-                    ),
+                    ), //"Expert curated portfolio"
                     const SizedBox(height: 10),
                     Container(
                       //margin: const EdgeInsets.only(left: 10, right: 10),
@@ -1493,7 +1493,7 @@ class _DiscoverState extends State<Discover> {
                         ],
                       ),
                     ), //top 100 stocks
-                    SizedBox(height: 10,),
+                    SizedBox(height: 10),
                     Container(
                       //margin: const EdgeInsets.only(left: 10, right: 10),
                       decoration: const BoxDecoration(
@@ -1520,7 +1520,7 @@ class _DiscoverState extends State<Discover> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: const <Widget>[
                                   Text(
-                                    "Dividends",
+                                    "Dividend Aristocrat",
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 16,
                                         fontWeight: FontWeight.bold),

@@ -71,7 +71,7 @@ class _BottomBarState extends State<BottomBar> {
           onTap: OnTappedItem,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.grey,
-          items:  [
+          items:[
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.house,),label:"Home"),
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.compass),label: "Discover"),
             BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.box),label: "Create"),
