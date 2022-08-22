@@ -1515,7 +1515,7 @@ class _DiscoverState extends State<Discover> {
                                   width: 50,
                                 ),
                               ),
-                              const SizedBox(width: 10),
+                              const SizedBox(width: 5),
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: const <Widget>[
