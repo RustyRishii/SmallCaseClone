@@ -1859,7 +1859,8 @@ class _DiscoverState extends State<Discover> {
                             style: TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 17),
+                                fontSize: 17
+                            ),
                           ),
                         ),
                       ),
