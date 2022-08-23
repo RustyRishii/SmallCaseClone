@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:newtry/allsmallcases.dart';
 
 class Discover extends StatefulWidget {
   const Discover({Key? key}) : super(key: key);
@@ -410,21 +411,26 @@ class _DiscoverState extends State<Discover> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue, width: 1),
-                          color: const Color.fromRGBO(32, 42, 52, 1),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(5))),
-                      margin: const EdgeInsets.all(10),
-                      height: 50,
-                      child: const Center(
-                        child: Text(
-                          "See all smallcases >",
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => allsmallcase()));
+                      } ,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blue, width: 1),
+                            color: const Color.fromRGBO(32, 42, 52, 1),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(5))),
+                        margin: const EdgeInsets.all(10),
+                        height: 50,
+                        child: const Center(
+                          child: Text(
+                            "See all smallcases >",
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17),
+                          ),
                         ),
                       ),
                     ),
@@ -1835,21 +1841,26 @@ class _DiscoverState extends State<Discover> {
                       ),
                     ), //Green Energy
                     SizedBox(height: 10),
-                    Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.blue, width: 1),
-                          color: const Color.fromRGBO(32, 42, 52, 1),
-                          borderRadius:
-                          const BorderRadius.all(Radius.circular(5))),
-                      margin: const EdgeInsets.all(10),
-                      height: 50,
-                      child: const Center(
-                        child: Text(
-                          "See all smallcases >",
-                          style: TextStyle(
-                              color: Colors.blue,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 17),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => allsmallcase()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(color: Colors.blue, width: 1),
+                            color: const Color.fromRGBO(32, 42, 52, 1),
+                            borderRadius:
+                            const BorderRadius.all(Radius.circular(5))),
+                        margin: const EdgeInsets.all(10),
+                        height: 50,
+                        child: const Center(
+                          child: Text(
+                            "See all smallcases >",
+                            style: TextStyle(
+                                color: Colors.blue,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 17),
+                          ),
                         ),
                       ),
                     ),
