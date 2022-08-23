@@ -24,7 +24,6 @@ class _WatchListState extends State<WatchList> {
           centerTitle: false,
         ),
         body: Container(
-          height: ,
           child: Image.network("https://media.istockphoto.com/vectors/black-man-watching-tv-on-couch-vector-id1359788431?b=1&k=20&m=1359788431&s=612x612&w=0&h=YTqjwOW-gcp1PgHZP33WYF3smduWAHYJkwc1uy7eLoc="),
         ),
         backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
