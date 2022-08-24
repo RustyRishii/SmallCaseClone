@@ -13,19 +13,42 @@ class _WatchListState extends State<WatchList> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title:
-          Column(
+          title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const <Widget> [
+            children: const <Widget>[
               Text("Watchlist"),
-              Text("Track your favorites", style: TextStyle(color: Colors.grey, fontSize: 15),)
+              Text(
+                "Track your favorites",
+                style: TextStyle(color: Colors.grey, fontSize: 15),
+              )
             ],
           ),
           centerTitle: false,
         ),
         body: Container(
-          child: Image.network("https://media.istockphoto.com/vectors/black-man-watching-tv-on-couch-vector-id1359788431?b=1&k=20&m=1359788431&s=612x612&w=0&h=YTqjwOW-gcp1PgHZP33WYF3smduWAHYJkwc1uy7eLoc="),
-        ),
-        backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
+            height: 250,
+            width: 450,
+            color: Color.fromRGBO(33, 34, 36, 1),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                ClipRRect(
+                  child: Image.asset(
+                    "assets/images/tv.png",
+                    height: 100,
+                    width: 200,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  "Start tracking smallcases",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20),
+                ),
+              ],
+            )),
+        backgroundColor: const Color.fromRGBO(29, 30, 32, 1));
   }
 }
