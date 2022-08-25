@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:newtry/Home.dart';
+import 'allsmallcases.dart';
 
 class WatchList extends StatefulWidget {
   const WatchList({Key? key}) : super(key: key);
@@ -99,9 +100,9 @@ class _WatchListState extends State<WatchList> {
               height: 320,
               child: Column(
                 children: <Widget>[
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
-                    children:const [
+                    children: const [
                       SizedBox(width: 10),
                       Text(
                         "Add smallcases to your watchlist",
@@ -113,7 +114,7 @@ class _WatchListState extends State<WatchList> {
                     ],
                   ),
                   Row(
-                    children:const [
+                    children: const [
                       SizedBox(width: 10),
                       Text(
                         "based on your recent activities",
@@ -121,11 +122,11 @@ class _WatchListState extends State<WatchList> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 5),
+                  const SizedBox(height: 5),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
-                      children: <Widget> [
+                      children: <Widget>[
                         Container(
                           decoration: const BoxDecoration(
                             //border: Border.all(width: 5, color: Colors.red),
@@ -140,7 +141,8 @@ class _WatchListState extends State<WatchList> {
                             children: <Widget>[
                               const SizedBox(height: 15),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   const SizedBox(width: 20),
                                   ClipRRect(
@@ -192,7 +194,7 @@ class _WatchListState extends State<WatchList> {
                               const SizedBox(height: 40),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceAround,
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   //const SizedBox(width: 1),
                                   Column(
@@ -242,7 +244,8 @@ class _WatchListState extends State<WatchList> {
                             children: <Widget>[
                               const SizedBox(height: 15),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   const SizedBox(width: 20),
                                   ClipRRect(
@@ -294,7 +297,7 @@ class _WatchListState extends State<WatchList> {
                               const SizedBox(height: 40),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceAround,
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   //const SizedBox(width: 1),
                                   Column(
@@ -396,7 +399,7 @@ class _WatchListState extends State<WatchList> {
                               const SizedBox(height: 40),
                               Row(
                                 mainAxisAlignment:
-                                MainAxisAlignment.spaceAround,
+                                    MainAxisAlignment.spaceAround,
                                 children: <Widget>[
                                   // const SizedBox(width: 20),
                                   Column(
@@ -439,6 +442,53 @@ class _WatchListState extends State<WatchList> {
                             ],
                           ),
                         ),
+                        Container(
+                          decoration: BoxDecoration(
+                            //border: Border.all(width: 5, color: Colors.red),
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            color: Color.fromRGBO(39, 40, 42, 1),
+                          ),
+                          margin: const EdgeInsets.all(15),
+                          //color: Colors.blue,
+                          width: 310,
+                          height: 230,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children:  <Widget>[
+                              Text(
+                                "Looking for more ideas, themes & strategies?",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 23),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context) => allsmallcase()));
+                                },
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      border: Border.all(color: Colors.blue, width: 1),
+                                      color: const Color.fromRGBO(32, 42, 52, 1),
+                                      borderRadius:
+                                      const BorderRadius.all(Radius.circular(5))),
+                                  margin: const EdgeInsets.all(10),
+                                  width: 150,
+                                  height: 50,
+                                  child: const Center(
+                                    child: Text(
+                                      "See all smallcases",
+                                      style: TextStyle(
+                                          color: Colors.blue,
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   ),
