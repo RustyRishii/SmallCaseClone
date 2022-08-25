@@ -7,8 +7,7 @@ import 'package:newtry/Home.dart';
 import 'investments.dart';
 import 'watchlist.dart';
 
-void main ()
-{
+void main() {
   runApp(const MyApp());
 }
 
@@ -24,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: BottomBar(),
+      home: const BottomBar(),
     );
   }
 }
@@ -37,22 +36,20 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-
   int CurrentIndex = 0;
 
-  void OnTappedItem(int index)
-  {
-    setState( () {
+  void OnTappedItem(int index) {
+    setState(() {
       CurrentIndex = index;
     });
   }
 
   final screens = [
-    Home(),
-    Discover(),
-    Create(),
-    WatchList(),
-    Investments(),
+    const Home(),
+    const Discover(),
+    const Create(),
+    const WatchList(),
+    const Investments(),
   ];
 
   @override
@@ -60,23 +57,27 @@ class _BottomBarState extends State<BottomBar> {
     return Scaffold(
       body: screens[CurrentIndex],
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(color: Colors.black, border: Border(top:BorderSide(color: Color.fromRGBO(33, 34, 36, 9), width: 1.5))),
+        decoration: const BoxDecoration(
+            color: Colors.black,
+            border: Border(
+                top: BorderSide(
+                    color: Color.fromRGBO(33, 34, 36, 9), width: 1.5))),
         child: BottomNavigationBar(
-          backgroundColor: Color.fromRGBO( 33, 34, 36, 5),
+          backgroundColor: const Color.fromRGBO(33, 34, 36, 5),
           type: BottomNavigationBarType.fixed,
           currentIndex: CurrentIndex,
           iconSize: 24,
-          unselectedLabelStyle: TextStyle(fontSize: 12),
-          selectedLabelStyle: TextStyle(fontSize: 12),
+          unselectedLabelStyle: const TextStyle(fontSize: 12),
+          selectedLabelStyle: const TextStyle(fontSize: 12),
           onTap: OnTappedItem,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.grey,
-          items:[
-            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.house,),label:"Home"),
-            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.compass),label: "Discover"),
-            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.box),label: "Create"),
-            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.bookmark),label: "Watchlist"),
-            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.businessTime),label: "Investments"),
+          items: const  [
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.house), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.compass), label: "Discover"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.box), label: "Create"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.bookmark), label: "Watchlist"),
+            BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.businessTime), label: "Investments"),
           ],
         ),
       ),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
@@ -11,7 +10,7 @@ class Home extends StatefulWidget {
 }
 
 String quote = "";
-final Widget IconTest = Icons.bookmark_border as Widget;
+final Widget iconTest = Icons.bookmark_border as Widget;
 
 class _HomeState extends State<Home> {
   @override
@@ -26,7 +25,7 @@ class _HomeState extends State<Home> {
       var data = jsonDecode(response.body);
       quote = data["content"];
 
-      await Future.delayed(Duration(microseconds: 1500));
+      await Future.delayed(const Duration(microseconds: 1500));
 
       setState(() {});
     };
@@ -50,7 +49,7 @@ class _HomeState extends State<Home> {
             var data = jsonDecode(response.body);
             quote = data["content"];
 
-            await Future.delayed(Duration(microseconds: 1500));
+            await Future.delayed(const Duration(microseconds: 1500));
 
             setState(() {});
           },
@@ -84,7 +83,7 @@ class _HomeState extends State<Home> {
                         Expanded(
                           child: Text(quote,
                               style:
-                                  TextStyle(color: Colors.grey, fontSize: 17)),
+                                  const TextStyle(color: Colors.grey, fontSize: 17)),
                           //style: TextStyle(color: Colors.grey, fontSize: 17),
                         ),
                       ],
