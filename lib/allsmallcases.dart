@@ -21,7 +21,6 @@ class _allsmallcaseState extends State<allsmallcase> {
       ),
       body: Column(
         children: <Widget> [
-
         ],
       ),
     );
