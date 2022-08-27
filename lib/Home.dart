@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'constants.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -83,8 +84,7 @@ class _HomeState extends State<Home> {
                           const SizedBox(width: 10),
                           Expanded(
                             child: Text(quote,
-                                style: const TextStyle(
-                                    color: Colors.grey, fontSize: 17)),
+                                style: kQuoteTextStyle),
                             //style: TextStyle(color: Colors.grey, fontSize: 17),
                           ),
                         ],
@@ -355,14 +355,8 @@ class _HomeState extends State<Home> {
                       child: Row(
                         children: <Widget>[
                           Container(
-                            decoration: const BoxDecoration(
-                              //border: Border.all(width: 5, color: Colors.red),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(12)),
-                              color: Color.fromRGBO(39, 40, 42, 1),
-                            ),
+                            decoration: kContainerDecoration,
                             margin: const EdgeInsets.all(10),
-                            //color: Colors.blue,
                             width: 310,
                             height: 230,
                             child: Column(
@@ -382,12 +376,7 @@ class _HomeState extends State<Home> {
                                     ),
                                     const SizedBox(width: 130),
                                     Container(
-                                      decoration: const BoxDecoration(
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(5),
-                                              bottomLeft: Radius.circular(5)),
-                                          color:
-                                              Color.fromRGBO(153, 128, 64, 1)),
+                                      decoration: kVolatilityDecoration,
                                       child: const Padding(
                                         padding: EdgeInsets.all(10),
                                         child: Text("Med. Volatility"),
@@ -402,7 +391,7 @@ class _HomeState extends State<Home> {
                                     Expanded(
                                       child: Text(
                                         "Rising Rural Demand",
-                                        style: TextStyle(fontSize: 20),
+                                        style: kTextStyleTitle,
                                       ),
                                     ),
                                   ],
@@ -414,8 +403,7 @@ class _HomeState extends State<Home> {
                                       child: Text(
                                         "Companies that stand to benefit from increasing rural consumption",
                                         maxLines: 2,
-                                        style: TextStyle(
-                                            fontSize: 15, color: Colors.grey),
+                                        style: kTextStyleDesc,
                                       ),
                                     ),
                                   ],
@@ -434,9 +422,7 @@ class _HomeState extends State<Home> {
                                         ),
                                         Text(
                                           "15.35%",
-                                          style: TextStyle(
-                                              color: Colors.green,
-                                              fontSize: 18),
+                                          style: kCAGRPercTextStyle,
                                         )
                                       ],
                                     ),
@@ -448,9 +434,7 @@ class _HomeState extends State<Home> {
                                         ),
                                         Text(
                                           "₹ 56,601",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18),
+                                          style: kMinAmountTextStyle,
                                         )
                                       ],
                                     ),
@@ -462,12 +446,7 @@ class _HomeState extends State<Home> {
                             ),
                           ), //Rural demand
                           Container(
-                            decoration: const BoxDecoration(
-                              //border: Border.all(width: 5, color: Colors.red),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(12)),
-                              color: Color.fromRGBO(39, 40, 42, 1),
-                            ),
+                            decoration: kContainerDecoration,
                             margin: const EdgeInsets.all(15),
                             //color: Colors.blue,
                             width: 310,
@@ -488,12 +467,7 @@ class _HomeState extends State<Home> {
                                     ),
                                     const SizedBox(width: 130),
                                     Container(
-                                      decoration: const BoxDecoration(
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(5),
-                                              bottomLeft: Radius.circular(5)),
-                                          color:
-                                              Color.fromRGBO(124, 69, 64, 1)),
+                                      decoration: kVolatilityDecoration,
                                       child: const Padding(
                                         padding: EdgeInsets.all(10),
                                         child: Text("High Volatility"),
@@ -508,7 +482,7 @@ class _HomeState extends State<Home> {
                                     Expanded(
                                       child: Text(
                                         "Digital Inclusion",
-                                        style: TextStyle(fontSize: 20),
+                                        style: kTextStyleTitle,
                                       ),
                                     ),
                                   ],
@@ -520,8 +494,7 @@ class _HomeState extends State<Home> {
                                       child: Text(
                                         "Comanies spearheading and benefitting from the digital revolution in india",
                                         maxLines: 2,
-                                        style: TextStyle(
-                                            fontSize: 15, color: Colors.grey),
+                                        style: kTextStyleDesc,
                                       ),
                                     ),
                                   ],
@@ -540,9 +513,7 @@ class _HomeState extends State<Home> {
                                         ),
                                         Text(
                                           "14.95%",
-                                          style: TextStyle(
-                                              color: Colors.green,
-                                              fontSize: 18),
+                                          style: kCAGRPercTextStyle,
                                         )
                                       ],
                                     ),
@@ -554,9 +525,7 @@ class _HomeState extends State<Home> {
                                         ),
                                         Text(
                                           "₹ 18,390",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18),
+                                          style: kMinAmountTextStyle,
                                         )
                                       ],
                                     ),
@@ -573,12 +542,7 @@ class _HomeState extends State<Home> {
                             ),
                           ), //Digital inclusion
                           Container(
-                            decoration: const BoxDecoration(
-                              //border: Border.all(width: 5, color: Colors.red),
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(12)),
-                              color: Color.fromRGBO(39, 40, 42, 1),
-                            ),
+                            decoration: kContainerDecoration,
                             margin: const EdgeInsets.all(15),
                             //color: Colors.blue,
                             width: 310,
@@ -599,12 +563,7 @@ class _HomeState extends State<Home> {
                                     ),
                                     const SizedBox(width: 130),
                                     Container(
-                                      decoration: const BoxDecoration(
-                                          borderRadius: BorderRadius.only(
-                                              topLeft: Radius.circular(5),
-                                              bottomLeft: Radius.circular(5)),
-                                          color:
-                                              Color.fromRGBO(124, 69, 64, 1)),
+                                      decoration: kVolatilityDecoration,
                                       child: const Padding(
                                         padding: EdgeInsets.all(10),
                                         child: Text("High Volatility"),
@@ -619,7 +578,7 @@ class _HomeState extends State<Home> {
                                     Expanded(
                                       child: Text(
                                         "Affordable Housing",
-                                        style: TextStyle(fontSize: 20),
+                                        style: kTextStyleTitle,
                                       ),
                                     ),
                                   ],
@@ -631,8 +590,7 @@ class _HomeState extends State<Home> {
                                       child: Text(
                                         "Companies participating in and benefitting from affordable housing projects",
                                         maxLines: 2,
-                                        style: TextStyle(
-                                            fontSize: 15, color: Colors.grey),
+                                        style: kTextStyleDesc,
                                       ),
                                     ),
                                   ],
@@ -651,9 +609,7 @@ class _HomeState extends State<Home> {
                                         ),
                                         Text(
                                           "10.68%",
-                                          style: TextStyle(
-                                              color: Colors.green,
-                                              fontSize: 18),
+                                          style: kCAGRPercTextStyle,
                                         )
                                       ],
                                     ),
@@ -665,9 +621,7 @@ class _HomeState extends State<Home> {
                                         ),
                                         Text(
                                           "₹ 32,710",
-                                          style: TextStyle(
-                                              color: Colors.white,
-                                              fontSize: 18),
+                                          style: kMinAmountTextStyle,
                                         )
                                       ],
                                     ),
