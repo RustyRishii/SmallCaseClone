@@ -149,7 +149,6 @@ class _HomeState extends State<Home> {
                         children: <Widget>[
                           Container(
                             decoration: const BoxDecoration(
-                              //border: Border.all(width: 5, color: Colors.red),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(12)),
                               color: Color.fromRGBO(62, 132, 165, 1),
