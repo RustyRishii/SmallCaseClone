@@ -83,8 +83,7 @@ class _HomeState extends State<Home> {
                               scale: 19),
                           const SizedBox(width: 10),
                           Expanded(
-                            child: Text(quote,
-                                style: kQuoteTextStyle),
+                            child: Text(quote, style: kQuoteTextStyle),
                             //style: TextStyle(color: Colors.grey, fontSize: 17),
                           ),
                         ],
@@ -296,7 +295,7 @@ class _HomeState extends State<Home> {
                           style: TextStyle(color: Colors.white, fontSize: 20),
                         )
                       ],
-                    ),
+                    ), //"Your watchlist"
                     const SizedBox(height: 5),
                     Row(
                       children: const <Widget>[
@@ -309,7 +308,7 @@ class _HomeState extends State<Home> {
                           ),
                         )
                       ],
-                    ),
+                    ), //"track and observer"
                     const SizedBox(height: 15),
                     Row(
                       children: <Widget>[
@@ -322,7 +321,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ],
-                    ),
+                    ), //"start watchlisting"
                     const SizedBox(height: 25),
                     Row(
                       children: const <Widget>[
@@ -337,7 +336,7 @@ class _HomeState extends State<Home> {
                               fontSize: 20),
                         )
                       ],
-                    ),
+                    ), //"popular investment ideas"
                     Row(
                       children: const <Widget>[
                         SizedBox(
@@ -348,296 +347,47 @@ class _HomeState extends State<Home> {
                           style: TextStyle(color: Colors.grey, fontSize: 16),
                         )
                       ],
-                    ),
+                    ), //"Ideas are trending among investors ⚡"
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: <Widget>[
-                          Container(
-                            decoration: kContainerDecoration,
-                            margin: const EdgeInsets.all(10),
-                            width: 310,
-                            height: 230,
-                            child: Column(
-                              children: <Widget>[
-                                const SizedBox(height: 15),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    const SizedBox(width: 20),
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(3.1),
-                                      child: Image.network(
-                                          "https://assets.smallcase.com/images/smallcases/200/SCNM_0012.png",
-                                          height: 50,
-                                          width: 50),
-                                    ),
-                                    const SizedBox(width: 130),
-                                    Container(
-                                      decoration: kVolatilityDecoration,
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(10),
-                                        child: Text("Med. Volatility"),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  //mainAxisAlignment: MainAxisAlignment.start,
-                                  children: const <Widget>[
-                                    SizedBox(width: 20, height: 40),
-                                    Expanded(
-                                      child: Text(
-                                        "Rising Rural Demand",
-                                        style: kTextStyleTitle,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: const <Widget>[
-                                    SizedBox(width: 20, height: 1),
-                                    Expanded(
-                                      child: Text(
-                                        "Companies that stand to benefit from increasing rural consumption",
-                                        maxLines: 2,
-                                        style: kTextStyleDesc,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 40),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    //const SizedBox(width: 1),
-                                    Column(
-                                      children: const <Widget>[
-                                        Text(
-                                          "6Y CAGR",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Text(
-                                          "15.35%",
-                                          style: kCAGRPercTextStyle,
-                                        )
-                                      ],
-                                    ),
-                                    Column(
-                                      children: const <Widget>[
-                                        Text(
-                                          "Min. Amount",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Text(
-                                          "₹ 56,601",
-                                          style: kMinAmountTextStyle,
-                                        )
-                                      ],
-                                    ),
-                                    const Icon(Icons.bookmark_border,
-                                        color: Colors.grey),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ), //Rural demand
-                          Container(
-                            decoration: kContainerDecoration,
-                            margin: const EdgeInsets.all(15),
-                            //color: Colors.blue,
-                            width: 310,
-                            height: 230,
-                            child: Column(
-                              children: <Widget>[
-                                const SizedBox(height: 15),
-                                Row(
-                                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    const SizedBox(width: 20),
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(3.1),
-                                      child: Image.network(
-                                          "https://assets.smallcase.com/images/smallcases/200/SCNM_0014.png",
-                                          height: 50,
-                                          width: 50),
-                                    ),
-                                    const SizedBox(width: 130),
-                                    Container(
-                                      decoration: kVolatilityDecoration,
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(10),
-                                        child: Text("High Volatility"),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  //mainAxisAlignment: MainAxisAlignment.start,
-                                  children: const <Widget>[
-                                    SizedBox(width: 20, height: 40),
-                                    Expanded(
-                                      child: Text(
-                                        "Digital Inclusion",
-                                        style: kTextStyleTitle,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: const <Widget>[
-                                    SizedBox(width: 20, height: 1),
-                                    Expanded(
-                                      child: Text(
-                                        "Comanies spearheading and benefitting from the digital revolution in india",
-                                        maxLines: 2,
-                                        style: kTextStyleDesc,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 40),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    // const SizedBox(width: 20),
-                                    Column(
-                                      children: const <Widget>[
-                                        Text(
-                                          "6Y CAGR",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Text(
-                                          "14.95%",
-                                          style: kCAGRPercTextStyle,
-                                        )
-                                      ],
-                                    ),
-                                    Column(
-                                      children: const <Widget>[
-                                        Text(
-                                          "Min. Amount",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Text(
-                                          "₹ 18,390",
-                                          style: kMinAmountTextStyle,
-                                        )
-                                      ],
-                                    ),
-                                    GestureDetector(
-                                        onTap: () {
-                                          const Icon(Icons.bookmark,
-                                              color: Colors.grey);
-                                        },
-                                        child: const Icon(Icons.bookmark_border,
-                                            color: Colors.grey)),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ), //Digital inclusion
-                          Container(
-                            decoration: kContainerDecoration,
-                            margin: const EdgeInsets.all(15),
-                            //color: Colors.blue,
-                            width: 310,
-                            height: 230,
-                            child: Column(
-                              children: <Widget>[
-                                const SizedBox(height: 15),
-                                Row(
-                                  //mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    const SizedBox(width: 20),
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(3.1),
-                                      child: Image.network(
-                                          "https://assets.smallcase.com/images/smallcases/200/SCNM_0024.png",
-                                          height: 50,
-                                          width: 50),
-                                    ),
-                                    const SizedBox(width: 130),
-                                    Container(
-                                      decoration: kVolatilityDecoration,
-                                      child: const Padding(
-                                        padding: EdgeInsets.all(10),
-                                        child: Text("High Volatility"),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  //mainAxisAlignment: MainAxisAlignment.start,
-                                  children: const <Widget>[
-                                    SizedBox(width: 20, height: 40),
-                                    Expanded(
-                                      child: Text(
-                                        "Affordable Housing",
-                                        style: kTextStyleTitle,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Row(
-                                  children: const <Widget>[
-                                    SizedBox(width: 20, height: 1),
-                                    Expanded(
-                                      child: Text(
-                                        "Companies participating in and benefitting from affordable housing projects",
-                                        maxLines: 2,
-                                        style: kTextStyleDesc,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 40),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: <Widget>[
-                                    // const SizedBox(width: 20),
-                                    Column(
-                                      children: const <Widget>[
-                                        Text(
-                                          "5Y CAGR",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Text(
-                                          "10.68%",
-                                          style: kCAGRPercTextStyle,
-                                        )
-                                      ],
-                                    ),
-                                    Column(
-                                      children: const <Widget>[
-                                        Text(
-                                          "Min. Amount",
-                                          style: TextStyle(color: Colors.grey),
-                                        ),
-                                        Text(
-                                          "₹ 32,710",
-                                          style: kMinAmountTextStyle,
-                                        )
-                                      ],
-                                    ),
-                                    GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            const Icon(Icons.bookmark,
-                                                color: Colors.grey);
-                                          });
-                                        },
-                                        child: const Icon(Icons.bookmark_border,
-                                            color: Colors.grey)),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
+                        children: const <Widget>[
+                          SmallCaseContainer(
+                            image:
+                                "https://assets.smallcase.com/images/smallcases/200/SCNM_0012.png",
+                            volatilityText: 'Med.Volatility',
+                            titleText: 'Rising Rural Demand',
+                            DescText:
+                                "Comapnies that stand to benefit from the increasing rural consumption",
+                            Cagr: '6Y CAGR',
+                            CagrReturnText: '15.35%',
+                            MinAmountText: 'Min.Amount',
+                            MinAmount: '₹56,601',
+                          ),//Rural demand
+                          SmallCaseContainer(
+                            image:
+                            "https://assets.smallcase.com/images/smallcases/200/SCNM_0014.png",
+                            volatilityText: 'High Volatility',
+                            titleText: 'Digital Inclusion',
+                            DescText:
+                            "Comapnies spearheading and benefitting from the digital revolution in India",
+                            Cagr: '6Y CAGR',
+                            CagrReturnText: '15.45%',
+                            MinAmountText: 'Min.Amount',
+                            MinAmount: '₹18,090',
+                          ),//Digital inclusion
+                          SmallCaseContainer(
+                            image:
+                            "https://assets.smallcase.com/images/smallcases/200/SCNM_0024.png",
+                            volatilityText: 'Med. Volatility',
+                            titleText: 'Affordable Housing',
+                            DescText:
+                            "Comapnies participating in and benefitting from affordable housing projects",
+                            Cagr: '6Y CAGR',
+                            CagrReturnText: '11.78%',
+                            MinAmountText: 'Min.Amount',
+                            MinAmount: '₹39,802',
+                          ),//affordable housing
                         ],
                       ),
                     ),
@@ -682,7 +432,7 @@ class _HomeState extends State<Home> {
                                     TextStyle(color: Colors.blue, fontSize: 15),
                               ),
                             ],
-                          )
+                          ) //"See next steps"
                         ],
                       ),
                     ),

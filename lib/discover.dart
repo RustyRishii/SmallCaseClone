@@ -127,19 +127,22 @@ class _DiscoverState extends State<Discover> {
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
-                        children: const  <Widget>[
-                          DiscoverContainer(text: "Low volatility smallcases", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.green,)), circleIcon: CircleAvatar(backgroundColor:Colors.green, child: Icon(Icons.add,color: Colors.white),)),
-                          DiscoverContainer(text: "Low investment amount", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.yellow,)), circleIcon: CircleAvatar(backgroundColor: Colors.yellow, child: Icon(Icons.currency_rupee,color:Colors.white),),),
-                          DiscoverContainer(text: "Top Gainers in the last year", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.green)),circleIcon: CircleAvatar(backgroundColor: Colors.green,child: Icon(Icons.call_made, color: Colors.white,),)),
-                          DiscoverContainer(text: "Free Access smallcases", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.blue,)),circleIcon: CircleAvatar(backgroundColor: Colors.blue,child: Icon(Icons.celebration, color: Colors.white,),)),
+                        children: const <Widget>[
+                          DiscoverContainer(text: "Low volatility smallcases", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.green,)), circleIcon: CircleAvatar(backgroundColor: Colors.green, child: Icon(Icons.add, color: Colors.white),)),
+                          DiscoverContainer(text: "Low investment amount", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.yellow,)), circleIcon: CircleAvatar(backgroundColor: Colors.yellow, child: Icon(Icons.currency_rupee, color: Colors.white),),),
+                          DiscoverContainer(text: "Top Gainers in the last year", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.green)), circleIcon: CircleAvatar(backgroundColor: Colors.green, child: Icon(Icons.call_made, color: Colors.white,),)),
+                          DiscoverContainer(text: "Free Access smallcases", ArrowIcon: (Icon(Icons.arrow_right_alt_rounded, color: Colors.blue,)), circleIcon: CircleAvatar(backgroundColor: Colors.blue, child: Icon(Icons.celebration, color: Colors.white,),)),
                         ],
                       ),
                     ),
                     const SizedBox(height: 10),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => allsmallcase()));
-                      } ,
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const allsmallcase()));
+                      },
                       child: Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.blue, width: 1),
@@ -1132,49 +1135,70 @@ class _DiscoverState extends State<Discover> {
                                   Text(
                                     "Top 100 stocks",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 16,
-                                    fontWeight: FontWeight.bold),
+                                        color: Colors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(height: 5,),
-                                  Text("by Windmill capital", style: TextStyle(
-                                    color: Colors.grey, fontSize: 14,
+                                  SizedBox(
+                                    height: 5,
                                   ),
+                                  Text(
+                                    "by Windmill capital",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 14,
+                                    ),
                                   )
                                 ],
                               ),
                               const SizedBox(width: 5),
                               Container(
-                                decoration: const BoxDecoration(color: Color.fromRGBO(33, 42, 55, 1),
-                                borderRadius: BorderRadius.all(Radius.circular(2))),
-                                margin: const EdgeInsets.only(left: 5, top: 20, right: 20),
+                                decoration: const BoxDecoration(
+                                    color: Color.fromRGBO(33, 42, 55, 1),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(2))),
+                                margin: const EdgeInsets.only(
+                                    left: 5, top: 20, right: 20),
                                 width: 90,
                                 child: const Padding(
                                   padding: EdgeInsets.only(left: 5, right: 3),
-                                  child: Text("Free access", style: TextStyle(color: Colors.blue)),
-                                ) ,
+                                  child: Text("Free access",
+                                      style: TextStyle(color: Colors.blue)),
+                                ),
                               ),
-                              const SizedBox(width: 50,),
-                              const Icon(Icons.bookmark_border, color: Colors.grey, size: 35,)
+                              const SizedBox(
+                                width: 50,
+                              ),
+                              const Icon(
+                                Icons.bookmark_border,
+                                color: Colors.grey,
+                                size: 35,
+                              )
                             ],
                           ),
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget> [
-                              SizedBox(width: 10,),
+                            children: const <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
                               Expanded(
-                                child: Text("India's most powerful companies in one portfolio. solid stability",
-                                maxLines: 2,
-                                style: TextStyle(fontSize: 15, color: Color.fromRGBO(210, 210, 210, 1)),),
+                                child: Text(
+                                  "India's most powerful companies in one portfolio. solid stability",
+                                  maxLines: 2,
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Color.fromRGBO(210, 210, 210, 1)),
+                                ),
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               //const SizedBox(width: 1),
                               Column(
@@ -1190,7 +1214,7 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Column(
@@ -1206,17 +1230,20 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5)),
                                     color: Color.fromRGBO(153, 128, 64, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
-                                  child: Text("Med. Volatility",
-                                  style: TextStyle(fontSize: 15),),
+                                  child: Text(
+                                    "Med. Volatility",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
                                 ),
                               ),
                             ],
@@ -1224,7 +1251,7 @@ class _DiscoverState extends State<Discover> {
                         ],
                       ),
                     ), //top 100 stocks
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Container(
                       //margin: const EdgeInsets.only(left: 10, right: 10),
                       decoration: const BoxDecoration(
@@ -1253,49 +1280,70 @@ class _DiscoverState extends State<Discover> {
                                   Text(
                                     "Dividend Aristocrat",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 16,
+                                        color: Colors.white,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(height: 5,),
-                                  Text("by Windmill capital", style: TextStyle(
-                                    color: Colors.grey, fontSize: 14,
+                                  SizedBox(
+                                    height: 5,
                                   ),
+                                  Text(
+                                    "by Windmill capital",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 14,
+                                    ),
                                   )
                                 ],
                               ),
                               const SizedBox(width: 5),
                               Container(
-                                decoration: const BoxDecoration(color: Color.fromRGBO(33, 42, 55, 1),
-                                    borderRadius: BorderRadius.all(Radius.circular(2))),
-                                margin: const EdgeInsets.only(left: 5, top: 20, right: 20),
+                                decoration: const BoxDecoration(
+                                    color: Color.fromRGBO(33, 42, 55, 1),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(2))),
+                                margin: const EdgeInsets.only(
+                                    left: 5, top: 20, right: 20),
                                 width: 90,
                                 child: const Padding(
                                   padding: EdgeInsets.only(left: 5, right: 3),
-                                  child: Text("Free access", style: TextStyle(color: Colors.blue)),
-                                ) ,
+                                  child: Text("Free access",
+                                      style: TextStyle(color: Colors.blue)),
+                                ),
                               ),
-                              const SizedBox(width: 50,),
-                              const Icon(Icons.bookmark_border, color: Colors.grey, size: 35,)
+                              const SizedBox(
+                                width: 50,
+                              ),
+                              const Icon(
+                                Icons.bookmark_border,
+                                color: Colors.grey,
+                                size: 35,
+                              )
                             ],
                           ),
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget> [
-                              SizedBox(width: 10,),
+                            children: const <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
                               Expanded(
-                                child: Text("Companies that have been consistently increasing  dividends. Extra goodness",
+                                child: Text(
+                                  "Companies that have been consistently increasing  dividends. Extra goodness",
                                   maxLines: 2,
-                                  style: TextStyle(fontSize: 15, color: Color.fromRGBO(210, 210, 210, 1)),),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Color.fromRGBO(210, 210, 210, 1)),
+                                ),
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               //const SizedBox(width: 1),
                               Column(
@@ -1311,7 +1359,7 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Column(
@@ -1327,17 +1375,20 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5)),
                                     color: Color.fromRGBO(153, 128, 64, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
-                                  child: Text("Med. Volatility",
-                                    style: TextStyle(fontSize: 15),),
+                                  child: Text(
+                                    "Med. Volatility",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
                                 ),
                               ),
                             ],
@@ -1345,7 +1396,7 @@ class _DiscoverState extends State<Discover> {
                         ],
                       ),
                     ), //Dividend aristocrat
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Container(
                       //margin: const EdgeInsets.only(left: 10, right: 10),
                       decoration: const BoxDecoration(
@@ -1374,38 +1425,55 @@ class _DiscoverState extends State<Discover> {
                                   Text(
                                     "CANSLIM-esque",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 16,
+                                        color: Colors.white,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(height: 5,),
-                                  Text("by Windmill capital", style: TextStyle(
-                                    color: Colors.grey, fontSize: 14,
+                                  SizedBox(
+                                    height: 5,
                                   ),
+                                  Text(
+                                    "by Windmill capital",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 14,
+                                    ),
                                   )
                                 ],
                               ),
-                              const SizedBox(width: 165,),
-                              const Icon(Icons.bookmark_border, color: Colors.grey, size: 35,)
+                              const SizedBox(
+                                width: 165,
+                              ),
+                              const Icon(
+                                Icons.bookmark_border,
+                                color: Colors.grey,
+                                size: 35,
+                              )
                             ],
                           ),
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget> [
-                              SizedBox(width: 10,),
+                            children: const <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
                               Expanded(
-                                child: Text("Efficeintly managed growing companies experiencing positive momentum, screened using CANSLIM method",
+                                child: Text(
+                                  "Efficeintly managed growing companies experiencing positive momentum, screened using CANSLIM method",
                                   maxLines: 2,
-                                  style: TextStyle(fontSize: 15, color: Color.fromRGBO(210, 210, 210, 1)),),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Color.fromRGBO(210, 210, 210, 1)),
+                                ),
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               //const SizedBox(width: 1),
                               Column(
@@ -1421,7 +1489,7 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Column(
@@ -1437,17 +1505,20 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5)),
                                     color: Color.fromRGBO(153, 128, 64, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
-                                  child: Text("Med. Volatility",
-                                    style: TextStyle(fontSize: 15),),
+                                  child: Text(
+                                    "Med. Volatility",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
                                 ),
                               ),
                             ],
@@ -1455,7 +1526,7 @@ class _DiscoverState extends State<Discover> {
                         ],
                       ),
                     ), //CANSLIM
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Container(
                       //margin: const EdgeInsets.only(left: 10, right: 10),
                       decoration: const BoxDecoration(
@@ -1484,38 +1555,53 @@ class _DiscoverState extends State<Discover> {
                                   Text(
                                     "Green Energy",
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 16,
+                                        color: Colors.white,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  SizedBox(height: 5,),
-                                  Text("by Nivehshaay", style: TextStyle(
-                                    color: Colors.grey, fontSize: 14,
+                                  SizedBox(
+                                    height: 5,
                                   ),
+                                  Text(
+                                    "by Nivehshaay",
+                                    style: TextStyle(
+                                      color: Colors.grey,
+                                      fontSize: 14,
+                                    ),
                                   )
                                 ],
                               ),
                               const SizedBox(width: 165),
-                              const Icon(Icons.bookmark_border, color: Colors.grey, size: 35,)
+                              const Icon(
+                                Icons.bookmark_border,
+                                color: Colors.grey,
+                                size: 35,
+                              )
                             ],
                           ),
                           const SizedBox(height: 10),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget> [
-                              SizedBox(width: 10,),
+                            children: const <Widget>[
+                              SizedBox(
+                                width: 10,
+                              ),
                               Expanded(
-                                child: Text("A portfolio of stcoks, which will get benefit  form the RE sector development. Rec amount > 2 lac",
+                                child: Text(
+                                  "A portfolio of stcoks, which will get benefit  form the RE sector development. Rec amount > 2 lac",
                                   maxLines: 2,
-                                  style: TextStyle(fontSize: 15, color: Color.fromRGBO(210, 210, 210, 1)),),
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      color: Color.fromRGBO(210, 210, 210, 1)),
+                                ),
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceAround,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: <Widget>[
                               //const SizedBox(width: 1),
                               Column(
@@ -1531,7 +1617,7 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Column(
@@ -1547,17 +1633,20 @@ class _DiscoverState extends State<Discover> {
                                   )
                                 ],
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 11,
                               ),
                               Container(
                                 decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                                    color: Color.fromRGBO(128, 0,0, 1)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(5)),
+                                    color: Color.fromRGBO(128, 0, 0, 1)),
                                 child: const Padding(
                                   padding: EdgeInsets.all(10),
-                                  child: Text("High Volatility",
-                                    style: TextStyle(fontSize: 15),),
+                                  child: Text(
+                                    "High Volatility",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
                                 ),
                               ),
                             ],
@@ -1565,17 +1654,20 @@ class _DiscoverState extends State<Discover> {
                         ],
                       ),
                     ), //Green Energy
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => allsmallcase()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const allsmallcase()));
                       },
                       child: Container(
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.blue, width: 1),
                             color: const Color.fromRGBO(32, 42, 52, 1),
                             borderRadius:
-                            const BorderRadius.all(Radius.circular(5))),
+                                const BorderRadius.all(Radius.circular(5))),
                         margin: const EdgeInsets.all(10),
                         height: 50,
                         child: const Center(
@@ -1584,13 +1676,12 @@ class _DiscoverState extends State<Discover> {
                             style: TextStyle(
                                 color: Colors.blue,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 17
-                            ),
+                                fontSize: 17),
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(height: 50),
+                    const SizedBox(height: 50),
                   ],
                 ),
               ),
@@ -1600,5 +1691,3 @@ class _DiscoverState extends State<Discover> {
         backgroundColor: const Color.fromRGBO(33, 34, 36, 1));
   }
 }
-
-
