@@ -634,4 +634,3 @@ class ExpertCuratedSmallCase extends StatelessWidget {
     );
   }
 }
-
