@@ -1,4 +1,4 @@
-# newtry
+# SmallCaseClone
 
 A new Flutter project.
 
