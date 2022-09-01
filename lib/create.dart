@@ -30,7 +30,8 @@ class _CreateState extends State<Create> {
             print(chart.chartQuotes!.timestamp);
           },
           child: ListView(
-            children: <Widget> [],
+            children: <Widget> [
+            ],
           ),
         ),
         backgroundColor: const Color.fromRGBO(33, 34, 36, 1));

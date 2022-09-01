@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:newtry/watchlist.dart';
 import 'dart:convert';
 import 'constants.dart';
 
@@ -314,7 +315,9 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         const SizedBox(width: 20),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const WatchList()));
+                          },
                           child: const Text(
                             "Start watchlisting >",
                             style: TextStyle(color: Colors.blue),

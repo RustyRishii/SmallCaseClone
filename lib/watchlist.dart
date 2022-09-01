@@ -165,7 +165,7 @@ class _WatchListState extends State<WatchList> {
                           MinAmount: '₹39,802',
                         ), //"Affordable Housing"
                         Container(
-                          decoration: BoxDecoration(
+                          decoration:  BoxDecoration(
                             borderRadius:
                             BorderRadius.all(Radius.circular(12)),
                             color: Color.fromRGBO(39, 40, 42, 1),
@@ -187,7 +187,7 @@ class _WatchListState extends State<WatchList> {
                                 onTap: () {
                                   Navigator.push(context, MaterialPageRoute(builder: (context) => allsmallcase()));
                                 },
-                                child: Container(
+                                child:  Container(
                                   decoration: BoxDecoration(
                                       border: Border.all(color: Colors.blue, width: 1),
                                       color: const Color.fromRGBO(32, 42, 52, 1),
