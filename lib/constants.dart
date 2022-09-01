@@ -26,6 +26,7 @@ class SmallCaseContainer extends StatelessWidget {
   final String MinAmountText;
   final String MinAmount;
 
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -111,10 +112,15 @@ class SmallCaseContainer extends StatelessWidget {
                   Text(
                     MinAmount,
                     style: const TextStyle(color: Colors.white, fontSize: 18),
-                  )
+                  ),
                 ],
               ),
-              const Icon(Icons.bookmark_border, color: Colors.grey),
+              IconButton(
+                color: Colors.grey,
+                onPressed: () {
+                },
+                icon: const Icon(Icons.bookmark_border),
+              ),
             ],
           ),
         ],
@@ -186,7 +192,14 @@ class DiscoverContainer extends StatelessWidget {
 //Discover page
 //2.Featured smallcases
 class FeaturedSmallcase extends StatelessWidget {
-  const FeaturedSmallcase({Key? key, required this.imageString, required this.ranking, required this.titleText, required this.managerName, required this.viewerText,}) : super(key: key);
+  const FeaturedSmallcase({
+    Key? key,
+    required this.imageString,
+    required this.ranking,
+    required this.titleText,
+    required this.managerName,
+    required this.viewerText,
+  }) : super(key: key);
 
   final String imageString;
   final String ranking;
@@ -200,8 +213,7 @@ class FeaturedSmallcase extends StatelessWidget {
       margin: const EdgeInsets.only(left: 10, right: 10),
       decoration: const BoxDecoration(
           color: Color.fromRGBO(39, 40, 42, 1),
-          borderRadius:
-          BorderRadius.all(Radius.circular(10))),
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       height: 170,
       width: 320,
       child: Column(
@@ -210,8 +222,7 @@ class FeaturedSmallcase extends StatelessWidget {
             height: 15,
           ),
           Row(
-            mainAxisAlignment:
-            MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(3.1),
@@ -224,22 +235,19 @@ class FeaturedSmallcase extends StatelessWidget {
               const Text(
                 "Nice",
                 style: TextStyle(
-                    fontSize: 33,
-                    color: Color.fromRGBO(39, 40, 42, 1)),
+                    fontSize: 33, color: Color.fromRGBO(39, 40, 42, 1)),
               ),
               Container(
                 decoration: const BoxDecoration(
                     color: Color.fromRGBO(44, 49, 81, 5),
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(5))),
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
                 margin: const EdgeInsets.all(10),
-                child:  Padding(
+                child: Padding(
                   padding: const EdgeInsets.all(5),
                   child: Text(
                     ranking,
                     style: const TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold),
+                        fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                 ),
               )
@@ -247,7 +255,7 @@ class FeaturedSmallcase extends StatelessWidget {
           ), //Image
           const SizedBox(height: 10),
           Row(
-            children:  <Widget>[
+            children: <Widget>[
               const SizedBox(
                 width: 20,
               ),
@@ -268,8 +276,7 @@ class FeaturedSmallcase extends StatelessWidget {
               ),
               Text(
                 managerName,
-                style: const TextStyle(
-                    color: Colors.grey, fontSize: 15),
+                style: const TextStyle(color: Colors.grey, fontSize: 15),
               ),
             ],
           ),
@@ -281,8 +288,7 @@ class FeaturedSmallcase extends StatelessWidget {
               ),
               Text(
                 viewerText,
-                style: const TextStyle(
-                    color: Colors.white, fontSize: 15),
+                style: const TextStyle(color: Colors.white, fontSize: 15),
               ),
             ],
           ) //Windmill capital
@@ -295,7 +301,14 @@ class FeaturedSmallcase extends StatelessWidget {
 //Discover page
 //3.Featured SmallCasesPT2
 class FeaturedSmallcasePT2 extends StatelessWidget {
-  const FeaturedSmallcasePT2({Key? key, required this.imageString, required this.Ranking, required this.Manager, required this.SmallCaseNumbers, required this.SmallCaseDesc,}) : super(key: key);
+  const FeaturedSmallcasePT2({
+    Key? key,
+    required this.imageString,
+    required this.Ranking,
+    required this.Manager,
+    required this.SmallCaseNumbers,
+    required this.SmallCaseDesc,
+  }) : super(key: key);
 
   final String imageString;
   final String Ranking;
@@ -309,43 +322,35 @@ class FeaturedSmallcasePT2 extends StatelessWidget {
       margin: const EdgeInsets.only(left: 10, right: 10),
       decoration: const BoxDecoration(
           color: Color.fromRGBO(39, 40, 42, 1),
-          borderRadius:
-          BorderRadius.all(Radius.circular(10))),
+          borderRadius: BorderRadius.all(Radius.circular(10))),
       height: 200,
       width: 320,
       child: Column(
         children: <Widget>[
           const SizedBox(height: 15),
           Row(
-            mainAxisAlignment:
-            MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.circular(3.1),
-                child: Image.network(
-                    imageString,
-                    height: 50,
-                    width: 50),
+                child: Image.network(imageString, height: 50, width: 50),
               ),
               const Text(
                 "Nice",
                 style: TextStyle(
-                    color: Color.fromRGBO(39, 40, 42, 1),
-                    fontSize: 35),
+                    color: Color.fromRGBO(39, 40, 42, 1), fontSize: 35),
               ),
               Container(
                 decoration: const BoxDecoration(
                     color: Color.fromRGBO(44, 49, 81, 5),
-                    borderRadius: BorderRadius.all(
-                        Radius.circular(5))),
+                    borderRadius: BorderRadius.all(Radius.circular(5))),
                 margin: const EdgeInsets.all(10),
-                child:  Padding(
+                child: Padding(
                   padding: const EdgeInsets.all(5),
                   child: Text(
                     Ranking,
                     style: const TextStyle(
-                        fontSize: 17,
-                        fontWeight: FontWeight.bold),
+                        fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                 ),
               )
@@ -353,7 +358,7 @@ class FeaturedSmallcasePT2 extends StatelessWidget {
           ),
           const SizedBox(height: 15),
           Row(
-            children:  <Widget>[
+            children: <Widget>[
               const SizedBox(width: 20),
               Text(
                 Manager,
@@ -365,12 +370,11 @@ class FeaturedSmallcasePT2 extends StatelessWidget {
             ],
           ),
           Row(
-            children:  <Widget>[
+            children: <Widget>[
               const SizedBox(width: 20),
               Text(
                 SmallCaseNumbers,
-                style: const TextStyle(
-                    color: Colors.grey, fontSize: 15),
+                style: const TextStyle(color: Colors.grey, fontSize: 15),
               )
             ],
           ),
@@ -378,14 +382,14 @@ class FeaturedSmallcasePT2 extends StatelessWidget {
           Container(
             margin: const EdgeInsets.all(5),
             child: Row(
-              children:  [
+              children: [
                 const SizedBox(width: 20),
                 Expanded(
                     child: Text(
-                      SmallCaseDesc,
-                      style: const TextStyle(color: Colors.white),
-                      maxLines: 2,
-                    )),
+                  SmallCaseDesc,
+                  style: const TextStyle(color: Colors.white),
+                  maxLines: 2,
+                )),
               ],
             ),
           )
@@ -398,7 +402,13 @@ class FeaturedSmallcasePT2 extends StatelessWidget {
 //Discover page
 //4.collections
 class CollectionsContainer extends StatelessWidget {
-  const CollectionsContainer({Key? key, required this.imageString, required this.titletext, required this.NumberOfSmallCases, required this.Desctext,}) : super(key: key);
+  const CollectionsContainer({
+    Key? key,
+    required this.imageString,
+    required this.titletext,
+    required this.NumberOfSmallCases,
+    required this.Desctext,
+  }) : super(key: key);
 
   final String imageString;
   final String titletext;
@@ -408,30 +418,24 @@ class CollectionsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin:
-      const EdgeInsets.only(left: 10, right: 10),
+      margin: const EdgeInsets.only(left: 10, right: 10),
       decoration: const BoxDecoration(
           color: Color.fromRGBO(39, 40, 42, 1),
-          borderRadius:
-          BorderRadius.all(Radius.circular(5))),
+          borderRadius: BorderRadius.all(Radius.circular(5))),
       height: 130,
       width: 300,
       child: Column(
-        crossAxisAlignment:
-        CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Stack(children: <Widget>[
             Padding(
-              padding:  const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: CircleAvatar(
-                child: Image.network(
-                    imageString
-                ),
+                child: Image.network(imageString),
               ),
             ),
-             Padding(
-              padding:
-              const EdgeInsets.fromLTRB(70, 15, 0, 0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(70, 15, 0, 0),
               child: Text(
                 titletext,
                 style: const TextStyle(
@@ -441,26 +445,20 @@ class CollectionsContainer extends StatelessWidget {
               ),
             ),
             Padding(
-              padding:
-              const EdgeInsets.fromLTRB(70, 35, 0, 0),
-              child: Text(
-                  NumberOfSmallCases,
-                  style: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 15)),
+              padding: const EdgeInsets.fromLTRB(70, 35, 0, 0),
+              child: Text(NumberOfSmallCases,
+                  style: const TextStyle(color: Colors.grey, fontSize: 15)),
             )
           ]),
           const SizedBox(height: 20),
           Row(
-            mainAxisAlignment:
-            MainAxisAlignment.center,
-            children:  <Widget>[
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
               Expanded(
                 child: Text(
                   Desctext,
                   maxLines: 2,
-                  style: const TextStyle(
-                      color: Colors.grey, fontSize: 15),
+                  style: const TextStyle(color: Colors.grey, fontSize: 15),
                 ),
               )
             ],
@@ -474,7 +472,17 @@ class CollectionsContainer extends StatelessWidget {
 //Discover page
 //5.Expert curated
 class ExpertCuratedSmallCase extends StatelessWidget {
-  const ExpertCuratedSmallCase({Key? key, required this.imageString, required this.titleText, required this.managerName, required this.descText, required this.cagrText, required this.returnPercText, required this.returnAmountText, required this.volatilityText,}) : super(key: key);
+  const ExpertCuratedSmallCase({
+    Key? key,
+    required this.imageString,
+    required this.titleText,
+    required this.managerName,
+    required this.descText,
+    required this.cagrText,
+    required this.returnPercText,
+    required this.returnAmountText,
+    required this.volatilityText,
+  }) : super(key: key);
 
   final String imageString;
   final String titleText;
@@ -490,8 +498,7 @@ class ExpertCuratedSmallCase extends StatelessWidget {
     return Container(
       //padding: EdgeInsets.all(20),
       //margin: const EdgeInsets.only(left: 10, right: 10),
-      decoration: const BoxDecoration(
-          color: Color.fromRGBO(29, 30, 32, 1)),
+      decoration: const BoxDecoration(color: Color.fromRGBO(29, 30, 32, 1)),
       height: 170,
       width: 700,
       child: Column(
@@ -512,7 +519,7 @@ class ExpertCuratedSmallCase extends StatelessWidget {
               const SizedBox(width: 10),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:  <Widget>[
+                children: <Widget>[
                   Text(
                     titleText,
                     style: TextStyle(
@@ -536,15 +543,13 @@ class ExpertCuratedSmallCase extends StatelessWidget {
               Container(
                 decoration: const BoxDecoration(
                     color: Color.fromRGBO(33, 42, 55, 1),
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(2))),
-                margin: const EdgeInsets.only(
-                    left: 5, top: 20, right: 20),
+                    borderRadius: BorderRadius.all(Radius.circular(2))),
+                margin: const EdgeInsets.only(left: 5, top: 20, right: 20),
                 width: 90,
                 child: const Padding(
                   padding: EdgeInsets.only(left: 5, right: 3),
-                  child: Text("Free access",
-                      style: TextStyle(color: Colors.blue)),
+                  child:
+                      Text("Free access", style: TextStyle(color: Colors.blue)),
                 ),
               ),
               const SizedBox(
@@ -560,7 +565,7 @@ class ExpertCuratedSmallCase extends StatelessWidget {
           const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children:  <Widget>[
+            children: <Widget>[
               SizedBox(
                 width: 10,
               ),
@@ -569,8 +574,7 @@ class ExpertCuratedSmallCase extends StatelessWidget {
                   descText,
                   maxLines: 2,
                   style: TextStyle(
-                      fontSize: 15,
-                      color: Color.fromRGBO(210, 210, 210, 1)),
+                      fontSize: 15, color: Color.fromRGBO(210, 210, 210, 1)),
                 ),
               )
             ],
@@ -583,15 +587,14 @@ class ExpertCuratedSmallCase extends StatelessWidget {
             children: <Widget>[
               //const SizedBox(width: 1),
               Column(
-                children:  <Widget>[
+                children: <Widget>[
                   Text(
                     cagrText,
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(
                     returnPercText,
-                    style: TextStyle(
-                        color: Colors.green, fontSize: 18),
+                    style: TextStyle(color: Colors.green, fontSize: 18),
                   )
                 ],
               ),
@@ -599,15 +602,14 @@ class ExpertCuratedSmallCase extends StatelessWidget {
                 width: 11,
               ),
               Column(
-                children:  <Widget>[
+                children: <Widget>[
                   Text(
                     "Min. Amount",
                     style: TextStyle(color: Colors.grey),
                   ),
                   Text(
                     returnAmountText,
-                    style: TextStyle(
-                        color: Colors.white, fontSize: 18),
+                    style: TextStyle(color: Colors.white, fontSize: 18),
                   )
                 ],
               ),
@@ -616,10 +618,9 @@ class ExpertCuratedSmallCase extends StatelessWidget {
               ),
               Container(
                 decoration: const BoxDecoration(
-                    borderRadius:
-                    BorderRadius.all(Radius.circular(5)),
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
                     color: Color.fromRGBO(153, 128, 64, 1)),
-                child:  Padding(
+                child: Padding(
                   padding: EdgeInsets.all(10),
                   child: Text(
                     volatilityText,
