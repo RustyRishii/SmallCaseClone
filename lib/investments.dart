@@ -12,6 +12,7 @@ class _InvestmentsState extends State<Investments> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 0,
           title: const Text("Investment"),
           centerTitle: false,
         ),

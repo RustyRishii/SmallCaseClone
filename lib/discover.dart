@@ -16,6 +16,7 @@ class _DiscoverState extends State<Discover> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          elevation: 0,
           title: const Text("Discover"),
           centerTitle: false,
         ),
@@ -246,21 +247,18 @@ class _DiscoverState extends State<Discover> {
                       child: Row(
                         children: const <Widget>[
                           FeaturedSmallcase(
-                            imageString:
-                                'https://assets.smallcase.com/images/smallcases/200/SCET_0005.png',
+                            imageString: 'https://assets.smallcase.com/images/smallcases/200/SCET_0005.png',
                             ranking: 'Popular',
                             titleText: 'Equit & Gold',
                             managerName: 'By Windmill capital',
                             viewerText: 'Viewed over 40k in the last month',
                           ), // Equity and gold
                           FeaturedSmallcase(
-                            imageString:
-                                'https://assets.smallcase.com/images/smallcases/200/SCET_0004.png',
+                            imageString: 'https://assets.smallcase.com/images/smallcases/200/SCET_0004.png',
                             ranking: 'Emerging',
                             titleText: 'Top 100 stocks',
                             managerName: 'By Windmill capital',
-                            viewerText:
-                                'Over 3k investors started SIP in last month',
+                            viewerText: 'Over 3k investors started SIP in last month',
                           ), //Top 100 stocks
                         ],
                       ),
@@ -451,12 +449,10 @@ class _DiscoverState extends State<Discover> {
                       children: const <Widget>[
                         SizedBox(height: 10),
                         ExpertCuratedSmallCase(
-                          imageString:
-                              'https://assets.smallcase.com/images/smallcases/200/SCET_0004.png',
+                          imageString: 'https://assets.smallcase.com/images/smallcases/200/SCET_0004.png',
                           titleText: 'Top 100 stocks',
                           managerName: 'by Windmill capital',
-                          descText:
-                              'India\'s most powerful companies in one portfolio. solid stability',
+                          descText: 'India\'s most powerful companies in one portfolio. solid stability',
                           cagrText: '4Y CAGR',
                           returnPercText: '15.35%',
                           returnAmountText: '₹ 2,209',

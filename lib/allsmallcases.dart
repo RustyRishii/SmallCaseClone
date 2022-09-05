@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
+import 'freesmallcases.dart';
+import 'package:newtry/PaidSmallCases.dart';
 
 class allsmallcase extends StatefulWidget {
   const allsmallcase({Key? key}) : super(key: key);
@@ -10,17 +13,31 @@ class allsmallcase extends StatefulWidget {
 class _allsmallcaseState extends State<allsmallcase> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          "smallcases",
-          style: TextStyle(
-            color: Colors.white,
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          title: const Text(
+            "smallcases",
+            style: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          bottom: const TabBar(
+            tabs:  <Widget>  [
+              Tab(text: "Free"),
+              Tab(text: "Paid"),
+            ],
           ),
         ),
-      ),
-      body: Column(
-        children: <Widget> [],
+        body: const TabBarView(
+          children: [
+            free(),
+            Paid(),
+        ],
+        ),
+          backgroundColor: const Color.fromRGBO(33, 34, 36, 1)
       ),
     );
   }
