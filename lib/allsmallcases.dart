@@ -35,7 +35,7 @@ class _allsmallcaseState extends State<allsmallcase> {
           children: [
             free(),
             Paid(),
-        ],
+          ],
         ),
           backgroundColor: const Color.fromRGBO(33, 34, 36, 1)
       ),
