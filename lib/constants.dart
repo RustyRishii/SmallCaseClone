@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 const kQuoteTextStyle = TextStyle(color: Colors.grey, fontSize: 17);
 
+Icon blueBookMark = const Icon(Icons.bookmark, color: Colors.blue);
+Icon bookMarkBorder = const Icon(Icons.bookmark_border);
+
 //Home page
 //1.Popular investment ideas
 class SmallCaseContainer extends StatelessWidget {
@@ -118,8 +121,16 @@ class SmallCaseContainer extends StatelessWidget {
               IconButton(
                 color: Colors.grey,
                 onPressed: () {
+                  if(Icon == bookMarkBorder)
+                    {
+                      bookMarkBorder = blueBookMark;
+                    }
+                  else
+                    {
+                      blueBookMark = bookMarkBorder;
+                    }
                 },
-                icon: const Icon(Icons.bookmark_border),
+                icon: bookMarkBorder
               ),
             ],
           ),

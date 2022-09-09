@@ -46,13 +46,13 @@ class _HomeState extends State<Home> {
         ),
         body: RefreshIndicator(
             onRefresh: () async {
-              var url = Uri.parse('https://jsonplaceholder.typicode.com/todos/1');
+              var url = Uri.parse('https://goquotes-api.herokuapp.com/api/v1/random?count=1');
               var response = await http.get(url);
               print('Response status: ${response.statusCode}');
               print('Response body: ${response.body}');
 
               var data = jsonDecode(response.body);
-              quote = data["title"];
+              quote = (data["quotes"][0]["text"]);
 
               await Future.delayed(const Duration(microseconds: 1500));
 
